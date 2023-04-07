@@ -1,0 +1,21 @@
+<html>
+
+<head></head>
+
+<body>
+    <div id="id_name">00:00:08</div>
+    <script>
+        const start = new Date();
+        function timer(start) {
+          var now = new Date();
+          var det = now - start;
+          console.log(det);
+          now.setTime(det);
+          now.setHours(0);
+          document.getElementById("id_name").innerHTML = now.toLocaleTimeString();
+        }
+        setInterval(function(){timer(start)}, 1000);
+    </script>
+</body>
+
+</html>
